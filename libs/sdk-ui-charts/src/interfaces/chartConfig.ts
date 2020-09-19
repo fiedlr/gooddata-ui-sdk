@@ -223,7 +223,7 @@ export type IDataLabelsVisible = boolean | string;
  * - "auto": datapoints shown, datapoints will not overlap when rendered
  * @public
  */
-export type IDataPointsVisible = boolean | string;
+export type IDataPointsVisible = boolean | "auto";
 
 /**
  * Vertical chart alignment options.

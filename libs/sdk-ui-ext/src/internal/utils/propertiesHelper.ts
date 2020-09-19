@@ -220,7 +220,14 @@ export function getDataPointsConfiguration(
     enableHidingOfDataPoints: boolean = false,
 ): IVisualizationProperties {
     if (enableHidingOfDataPoints) {
-        return controlProperties;
+        const dataPointsVisible = controlProperties.dataPoints?.visible;
+
+        return {
+            ...controlProperties,
+            dataPoints: {
+                visible: dataPointsVisible !== undefined ? dataPointsVisible : "auto",
+            },
+        };
     }
 
     return {
